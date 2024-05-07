@@ -10,6 +10,7 @@ import XCTest
 
 final class MarsRoverTests: XCTestCase {
     var marsRover: MarsRover!
+    let mars = Mars()
 
     override func setUpWithError() throws {
         marsRover = MarsRover(x: 1, y: 4, direction: "N")
@@ -106,6 +107,33 @@ final class MarsRoverTests: XCTestCase {
         XCTAssertEqual(marsRover.getDirection(), "N")
     }
 
+    func testMarsLimit() throws {
+        marsRover = MarsRover(x: 0, y: 0, direction: "N")
+
+        marsRover.execute(command: "b") // 10, 0
+
+        XCTAssertEqual(marsRover.getX(), 0)
+        XCTAssertEqual(marsRover.getY(), mars.limitY)
+    }
+
+    func testBigCommand() throws {
+        marsRover = MarsRover(x: 0, y: 0, direction: "N")
+        marsRover.execute(command: "fffrfflb") // 2, 2
+
+        XCTAssertEqual(marsRover.getX(), 2)
+        XCTAssertEqual(marsRover.getY(), 2)
+        XCTAssertEqual(marsRover.getDirection(), "N")
+    }
+
+    func testBigCommandBetweenLimits() throws {
+        marsRover = MarsRover(x: 0, y: 0, direction: "S")
+        marsRover.execute(command: "fffrfflb") // 9, 9
+
+        XCTAssertEqual(marsRover.getX(), 9)
+        XCTAssertEqual(marsRover.getY(), 9)
+        XCTAssertEqual(marsRover.getDirection(), "S")
+    }
+
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
@@ -113,6 +141,3 @@ final class MarsRoverTests: XCTestCase {
         }
     }
 }
-
-
-

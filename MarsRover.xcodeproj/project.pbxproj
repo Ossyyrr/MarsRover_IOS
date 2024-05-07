@@ -17,6 +17,8 @@
 		4B4743BE2BEA2DD900DE5091 /* MarsRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743BD2BEA2DD900DE5091 /* MarsRoverUITests.swift */; };
 		4B4743C02BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743BF2BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift */; };
 		4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */; };
+		4B4743CF2BEA4AD600DE5091 /* Mars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743CE2BEA4AD500DE5091 /* Mars.swift */; };
+		4B4743D12BEA4FA700DE5091 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D02BEA4FA700DE5091 /* Direction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		4B4743BD2BEA2DD900DE5091 /* MarsRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITests.swift; sourceTree = "<group>"; };
 		4B4743BF2BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = SOURCE_ROOT; };
+		4B4743CE2BEA4AD500DE5091 /* Mars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars.swift; sourceTree = "<group>"; };
+		4B4743D02BEA4FA700DE5091 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 		4B4743902BEA2DD700DE5091 = {
 			isa = PBXGroup;
 			children = (
+				4B4743D02BEA4FA700DE5091 /* Direction.swift */,
+				4B4743CE2BEA4AD500DE5091 /* Mars.swift */,
 				4B47439B2BEA2DD700DE5091 /* MarsRover */,
 				4B4743B22BEA2DD900DE5091 /* MarsRoverTests */,
 				4B4743BC2BEA2DD900DE5091 /* MarsRoverUITests */,
@@ -265,6 +271,8 @@
 				4B47439D2BEA2DD700DE5091 /* AppDelegate.swift in Sources */,
 				4B47439F2BEA2DD700DE5091 /* SceneDelegate.swift in Sources */,
 				4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */,
+				4B4743CF2BEA4AD600DE5091 /* Mars.swift in Sources */,
+				4B4743D12BEA4FA700DE5091 /* Direction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
