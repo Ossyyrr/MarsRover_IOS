@@ -16,6 +16,7 @@
 		4B4743B42BEA2DD900DE5091 /* MarsRoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743B32BEA2DD900DE5091 /* MarsRoverTests.swift */; };
 		4B4743BE2BEA2DD900DE5091 /* MarsRoverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743BD2BEA2DD900DE5091 /* MarsRoverUITests.swift */; };
 		4B4743C02BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743BF2BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift */; };
+		4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		4B4743B92BEA2DD900DE5091 /* MarsRoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarsRoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B4743BD2BEA2DD900DE5091 /* MarsRoverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITests.swift; sourceTree = "<group>"; };
 		4B4743BF2BEA2DD900DE5091 /* MarsRoverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRoverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarsRover.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		4B47439B2BEA2DD700DE5091 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
+				4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */,
 				4B47439C2BEA2DD700DE5091 /* AppDelegate.swift */,
 				4B47439E2BEA2DD700DE5091 /* SceneDelegate.swift */,
 				4B4743A02BEA2DD700DE5091 /* ViewController.swift */,
@@ -261,6 +264,7 @@
 				4B4743A12BEA2DD700DE5091 /* ViewController.swift in Sources */,
 				4B47439D2BEA2DD700DE5091 /* AppDelegate.swift in Sources */,
 				4B47439F2BEA2DD700DE5091 /* SceneDelegate.swift in Sources */,
+				4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
