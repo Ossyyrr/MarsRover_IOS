@@ -8,83 +8,64 @@
 import Foundation
 
 class MarsRover {
-    private var x: Int
-    private var y: Int
-    private var direction: DirectionState
-
-    private let mars = Mars()
-
     init(
         x: Int,
         y: Int,
         direction: String
     ) {
-        self.x = x
-        self.y = y
+        self.position = Position(x: x, y: y)
         switch direction {
-        case "N": self.direction = North()
-        case "S": self.direction = South()
-        case "E": self.direction = East()
-        case "W": self.direction = West()
-        default: self.direction = North()
+        case "N": self.direction = NorthState()
+        case "S": self.direction = SouthState()
+        case "E": self.direction = EastState()
+        case "W": self.direction = WestState()
+        default: self.direction = NorthState()
         }
     }
+
+    private var position: Position
+    private var direction: RoverDirectionState
+
+    private let mars = Mars()
 
     func execute(command: String) {
         for char in command {
             switch char {
-            case "f": moveForward()
-            case "b": moveBackward()
-            case "l": turnLeft()
-            case "r": turnRight()
+            case "f": position = moveForward()
+            case "b": position = moveBackward()
+            case "l": direction = direction.turnLeft()
+            case "r": direction = direction.turnRight()
             default: break
             }
         }
-
-        print("Current position: \(x), \(y), \(direction)")
+        print("Current position: \(position.x), \(position.y), \(direction)")
     }
 
-    func getX() -> Int { x }
-    func getY() -> Int { y }
+    func getX() -> Int { position.x }
+    func getY() -> Int { position.y }
     func getDirection() -> String { direction.toString() }
 
-    private func moveForward() {
+    private func moveForward() -> Position {
+        var newPosition = position
         switch direction {
-        case is North: y = (y == mars.limitY) ? 0 : (y + 1)
-        case is South: y = (y == 0) ? mars.limitY : (y - 1)
-        case is East: x = (x == mars.limitX) ? 0 : (x + 1)
-        case is West: x = (x == 0) ? mars.limitX : (x - 1)
+        case is NorthState: newPosition.y = (position.y == mars.limitY) ? 0 : (position.y + 1)
+        case is SouthState: newPosition.y = (position.y == 0) ? mars.limitY : (position.y - 1)
+        case is EastState: newPosition.x = (position.x == mars.limitX) ? 0 : (position.x + 1)
+        case is WestState: newPosition.x = (position.x == 0) ? mars.limitX : (position.x - 1)
         default: break
         }
+        return newPosition
     }
 
-    private func moveBackward() {
+    private func moveBackward() -> Position {
+        var newPosition = position
         switch direction {
-        case is North: y = (y == 0) ? mars.limitY : (y - 1)
-        case is South: y = (y == mars.limitY) ? 0 : (y + 1)
-        case is East: x = (x == 0) ? mars.limitX : (x - 1)
-        case is West: x = (x == mars.limitX) ? 0 : (x + 1)
+        case is NorthState: newPosition.y = (position.y == 0) ? mars.limitY : (position.y - 1)
+        case is SouthState: newPosition.y = (position.y == mars.limitY) ? 0 : (position.y + 1)
+        case is EastState: newPosition.x = (position.x == 0) ? mars.limitX : (position.x - 1)
+        case is WestState: newPosition.x = (position.x == mars.limitX) ? 0 : (position.x + 1)
         default: break
         }
-    }
-
-    private func turnLeft() {
-        switch direction {
-        case is North: direction = West()
-        case is South: direction = East()
-        case is East: direction = North()
-        case is West: direction = South()
-        default: break
-        }
-    }
-
-    private func turnRight() {
-        switch direction {
-        case is North: direction = East()
-        case is South: direction = West()
-        case is East: direction = South()
-        case is West: direction = North()
-        default: break
-        }
+        return newPosition
     }
 }
