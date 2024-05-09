@@ -11,20 +11,18 @@ protocol RoverCommand {
 
 class MoveForwardCommand: RoverCommand {
     var status: RoverStatus
-    var mars: Mars
 
-    init(roverStatus: RoverStatus, mars: Mars) {
+    init(roverStatus: RoverStatus) {
         self.status = roverStatus
-        self.mars = mars
     }
 
     func execute() -> RoverStatus {
         var newPosition = status.position
         switch status.direction {
-        case is NorthState: newPosition.y = (status.position.y == mars.limitY) ? 0 : (status.position.y + 1)
-        case is SouthState: newPosition.y = (status.position.y == 0) ? mars.limitY : (status.position.y - 1)
-        case is EastState: newPosition.x = (status.position.x == mars.limitX) ? 0 : (status.position.x + 1)
-        case is WestState: newPosition.x = (status.position.x == 0) ? mars.limitX : (status.position.x - 1)
+        case is NorthState: newPosition.y = (status.position.y == Mars.limitY) ? 0 : (status.position.y + 1)
+        case is SouthState: newPosition.y = (status.position.y == 0) ? Mars.limitY : (status.position.y - 1)
+        case is EastState: newPosition.x = (status.position.x == Mars.limitX) ? 0 : (status.position.x + 1)
+        case is WestState: newPosition.x = (status.position.x == 0) ? Mars.limitX : (status.position.x - 1)
         default: break
         }
         return RoverStatus(position: newPosition, direction: status.direction)
@@ -33,20 +31,18 @@ class MoveForwardCommand: RoverCommand {
 
 class MoveBackwardCommand: RoverCommand {
     var status: RoverStatus
-    var mars: Mars
 
-    init(roverStatus: RoverStatus, mars: Mars) {
+    init(roverStatus: RoverStatus) {
         self.status = roverStatus
-        self.mars = mars
     }
 
     func execute() -> RoverStatus {
         var newPosition = status.position
         switch status.direction {
-        case is NorthState: newPosition.y = (status.position.y == 0) ? mars.limitY : (status.position.y - 1)
-        case is SouthState: newPosition.y = (status.position.y == mars.limitY) ? 0 : (status.position.y + 1)
-        case is EastState: newPosition.x = (status.position.x == 0) ? mars.limitX : (status.position.x - 1)
-        case is WestState: newPosition.x = (status.position.x == mars.limitX) ? 0 : (status.position.x + 1)
+        case is NorthState: newPosition.y = (status.position.y == 0) ? Mars.limitY : (status.position.y - 1)
+        case is SouthState: newPosition.y = (status.position.y == Mars.limitY) ? 0 : (status.position.y + 1)
+        case is EastState: newPosition.x = (status.position.x == 0) ? Mars.limitX : (status.position.x - 1)
+        case is WestState: newPosition.x = (status.position.x == Mars.limitX) ? 0 : (status.position.x + 1)
         default: break
         }
         return RoverStatus(position: newPosition, direction: status.direction)

@@ -8,6 +8,6 @@
 import Foundation
 
 class Mars {
-    let limitX: Int = 10
-    let limitY: Int = 10
+    static let limitX: Int = 10
+    static let limitY: Int = 10
 }

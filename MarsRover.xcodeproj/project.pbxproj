@@ -22,6 +22,7 @@
 		4B4743D32BEA54E400DE5091 /* RoverCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D22BEA54E400DE5091 /* RoverCommand.swift */; };
 		4B4743D52BECB0E700DE5091 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D42BECB0E700DE5091 /* Position.swift */; };
 		4B4743D82BECC94200DE5091 /* RoverStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D72BECC94200DE5091 /* RoverStatus.swift */; };
+		4B4743DA2BECF4B700DE5091 /* CommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D92BECF4B700DE5091 /* CommandFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		4B4743D22BEA54E400DE5091 /* RoverCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverCommand.swift; sourceTree = "<group>"; };
 		4B4743D42BECB0E700DE5091 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		4B4743D72BECC94200DE5091 /* RoverStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverStatus.swift; sourceTree = "<group>"; };
+		4B4743D92BECF4B700DE5091 /* CommandFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		4B4743902BEA2DD700DE5091 = {
 			isa = PBXGroup;
 			children = (
+				4B4743D92BECF4B700DE5091 /* CommandFactory.swift */,
 				4B47439B2BEA2DD700DE5091 /* MarsRover */,
 				4B4743B22BEA2DD900DE5091 /* MarsRoverTests */,
 				4B4743BC2BEA2DD900DE5091 /* MarsRoverUITests */,
@@ -290,6 +293,7 @@
 				4B47439F2BEA2DD700DE5091 /* SceneDelegate.swift in Sources */,
 				4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */,
 				4B4743CF2BEA4AD600DE5091 /* Mars.swift in Sources */,
+				4B4743DA2BECF4B700DE5091 /* CommandFactory.swift in Sources */,
 				4B4743D52BECB0E700DE5091 /* Position.swift in Sources */,
 				4B4743D82BECC94200DE5091 /* RoverStatus.swift in Sources */,
 				4B4743D12BEA4FA700DE5091 /* RoverDirectionState.swift in Sources */,

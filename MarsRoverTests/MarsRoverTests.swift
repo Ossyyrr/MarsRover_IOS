@@ -10,7 +10,7 @@ import XCTest
 
 final class MarsRoverTests: XCTestCase {
     var marsRover: MarsRover!
-    let mars = Mars()
+ 
 
     override func setUpWithError() throws {
         marsRover = MarsRover(x: 1, y: 4, direction: "N")
@@ -113,7 +113,7 @@ final class MarsRoverTests: XCTestCase {
         marsRover.execute(command: "b") // 10, 0
 
         XCTAssertEqual(marsRover.getX(), 0)
-        XCTAssertEqual(marsRover.getY(), mars.limitY)
+        XCTAssertEqual(marsRover.getY(), Mars.limitY)
     }
 
     func testBigCommand() throws {
