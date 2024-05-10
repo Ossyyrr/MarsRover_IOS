@@ -25,6 +25,10 @@
 		4B4743DA2BECF4B700DE5091 /* CommandFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743D92BECF4B700DE5091 /* CommandFactory.swift */; };
 		4B4743DC2BECF5E500DE5091 /* DirectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743DB2BECF5E500DE5091 /* DirectionFactory.swift */; };
 		4B4743E12BECFBFC00DE5091 /* MoveStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743E02BECFBFC00DE5091 /* MoveStrategy.swift */; };
+		4B4743E42BEE0BE400DE5091 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743E32BEE0BE400DE5091 /* GridView.swift */; };
+		4B4743E82BEE0C5D00DE5091 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743E72BEE0C5D00DE5091 /* InputView.swift */; };
+		4B4743EA2BEE0CEA00DE5091 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743E92BEE0CEA00DE5091 /* ImageView.swift */; };
+		4B4743EE2BEE176800DE5091 /* ControlButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4743ED2BEE176800DE5091 /* ControlButtonsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		4B4743D92BECF4B700DE5091 /* CommandFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandFactory.swift; sourceTree = "<group>"; };
 		4B4743DB2BECF5E500DE5091 /* DirectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionFactory.swift; sourceTree = "<group>"; };
 		4B4743E02BECFBFC00DE5091 /* MoveStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveStrategy.swift; sourceTree = "<group>"; };
+		4B4743E32BEE0BE400DE5091 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		4B4743E72BEE0C5D00DE5091 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		4B4743E92BEE0CEA00DE5091 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		4B4743ED2BEE176800DE5091 /* ControlButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		4B4743902BEA2DD700DE5091 = {
 			isa = PBXGroup;
 			children = (
+				4B4743ED2BEE176800DE5091 /* ControlButtonsView.swift */,
 				4B47439B2BEA2DD700DE5091 /* MarsRover */,
 				4B4743B22BEA2DD900DE5091 /* MarsRoverTests */,
 				4B4743BC2BEA2DD900DE5091 /* MarsRoverUITests */,
@@ -117,11 +126,8 @@
 		4B47439B2BEA2DD700DE5091 /* MarsRover */ = {
 			isa = PBXGroup;
 			children = (
-				4B4743E22BECFD2100DE5091 /* Strategy */,
-				4B4743DF2BECF62A00DE5091 /* State */,
-				4B4743DE2BECF61600DE5091 /* Command */,
-				4B4743DD2BECF5F100DE5091 /* Factory */,
-				4B4743D62BECC91600DE5091 /* Structs */,
+				4B4743E62BEE0BF800DE5091 /* Core */,
+				4B4743E52BEE0BEF00DE5091 /* Layout */,
 				4B4743CC2BEA3BF600DE5091 /* MarsRover.swift */,
 				4B47439C2BEA2DD700DE5091 /* AppDelegate.swift */,
 				4B47439E2BEA2DD700DE5091 /* SceneDelegate.swift */,
@@ -192,6 +198,28 @@
 				4B4743E02BECFBFC00DE5091 /* MoveStrategy.swift */,
 			);
 			path = Strategy;
+			sourceTree = "<group>";
+		};
+		4B4743E52BEE0BEF00DE5091 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				4B4743E72BEE0C5D00DE5091 /* InputView.swift */,
+				4B4743E32BEE0BE400DE5091 /* GridView.swift */,
+				4B4743E92BEE0CEA00DE5091 /* ImageView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		4B4743E62BEE0BF800DE5091 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4B4743D62BECC91600DE5091 /* Structs */,
+				4B4743DD2BECF5F100DE5091 /* Factory */,
+				4B4743DE2BECF61600DE5091 /* Command */,
+				4B4743DF2BECF62A00DE5091 /* State */,
+				4B4743E22BECFD2100DE5091 /* Strategy */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,9 +353,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B4743EA2BEE0CEA00DE5091 /* ImageView.swift in Sources */,
 				4B4743D32BEA54E400DE5091 /* RoverCommand.swift in Sources */,
+				4B4743E82BEE0C5D00DE5091 /* InputView.swift in Sources */,
 				4B4743A12BEA2DD700DE5091 /* ViewController.swift in Sources */,
 				4B47439D2BEA2DD700DE5091 /* AppDelegate.swift in Sources */,
+				4B4743E42BEE0BE400DE5091 /* GridView.swift in Sources */,
 				4B4743DC2BECF5E500DE5091 /* DirectionFactory.swift in Sources */,
 				4B47439F2BEA2DD700DE5091 /* SceneDelegate.swift in Sources */,
 				4B4743CD2BEA3BF600DE5091 /* MarsRover.swift in Sources */,
@@ -336,6 +367,7 @@
 				4B4743DA2BECF4B700DE5091 /* CommandFactory.swift in Sources */,
 				4B4743D52BECB0E700DE5091 /* Position.swift in Sources */,
 				4B4743D82BECC94200DE5091 /* RoverStatus.swift in Sources */,
+				4B4743EE2BEE176800DE5091 /* ControlButtonsView.swift in Sources */,
 				4B4743D12BEA4FA700DE5091 /* RoverDirectionState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
